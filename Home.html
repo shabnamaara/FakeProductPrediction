@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fake Product Identification</title>
+<script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<style>
+
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+table, th, td { border: 1px solid #ddd; padding: 8px; }
+th { background-color: #f2f2f2; }
+input { margin: 5px; padding: 5px; width: 200px; }
+button { padding: 5px 10px; margin: 5px; }
+</style>
+</head>
+<body>
+<h1>Fake Product Identification System</h1>
+<div>
+<h2>Add Product</h2>
+<input type="text" id="productId" placeholder="Product ID">
+<input type="text" id="productName" placeholder="Product Name">
+<input type="text" id="manufacturer" placeholder="Manufacturer">
+<button onclick="addProduct()">Add Product</button>
+<p id="addProductError" style="color: red;"></p>
+</div>
+<div>
+<h2>Verify Product</h2>
+<input type="text" id="verifyProductId" placeholder="Product ID">
+<button onclick="verifyProduct()">Verify Product</button>
+<p id="verifyResult"></p>
+</div>
+<div>
+<h2>Added Products</h2>
+<button onclick="loadProducts()">Refresh Product List</button>
+<table id="productTable">
+<thead>
+<tr>
+<th>Product ID</th>
+<th>Name</th>
+<th>Manufacturer</th>
+</tr>
+</thead>
+<tbody id="productTableBody">
+</tbody>
+</table>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
